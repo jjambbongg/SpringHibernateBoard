@@ -20,7 +20,7 @@ public class BoardDaoImpl extends AbstractDao<Integer, Board> implements BoardDa
 		Criteria criteria = createEntityCriteria();
 		criteria.setFirstResult(rowNum * (pageNum - 1));
 		criteria.setMaxResults(rowNum);	
-		criteria.addOrder(Order.desc("no"));
+		criteria.addOrder(Order.desc("no"));		
 		return (List<Board>)criteria.list();
 	}
 	
